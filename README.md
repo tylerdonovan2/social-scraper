@@ -37,5 +37,5 @@ following        # (int) number of people the account is following
 followers        # (int) number of people following the account
 highlight_count  # (int) number of highlights
 post_count       # (int) number of posts
-posts            # [(dict)] {"shortcode":"post shortcode","caption": "post caption","likes": "like count","comments": "comment count","url": "post url","images": "array of post image urls"}
+posts            # [(dict)] {"shortcode":"post shortcode","caption": "post caption","likes": "like count","comments": "comment count","url": "post url"}
 ```
