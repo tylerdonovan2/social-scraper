@@ -2,6 +2,9 @@ Allows a variety data to be pulled from various social media platforms.
 Current Working Sites:
 - Instagram
 - TikTok
+  
+*NOTE: THIS IS BEGAN AS A TOOL FOR A PERSONAL PROJECT AND IS A WORK IN PROGRESS*
+*MAY NOT CONTINUALLY BE UPDATED*
 
 
 Example scraping a post:
