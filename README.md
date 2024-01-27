@@ -4,27 +4,30 @@ Current Working Sites:
 - TikTok
 
 
-Example of scraping a post:
+Example scraping a post:
 ```
 # To get the link, click share -> copy link
 # the video id can be found in the link
 
 # https://www.instagram.com/p/C2d1yC_Mmga/?utm_source=ig_web_copy_link
-instagram_post = instagram.post('C2d1yC_Mmga')
-link_instagram_post = instagram.post('https://www.instagram.com/p/C2d1yC_Mmga/?utm_source=ig_web_copy_link') # (this works too)
-
 # https://www.tiktok.com/@jim59186/video/7316727623550340398?is_from_webapp=1&sender_device=pc
-tiktokt_post = tiktok.post('7316727623550340398')
+
+instagram_post = instagram.post('C2d1yC_Mmga')
+tiktok_post = tiktok.post('7316727623550340398')
+
+# these work too
+instagram_post = instagram.post('https://www.instagram.com/p/C2d1yC_Mmga/?utm_source=ig_web_copy_link') 
+tiktok_post = tiktok.post('[https://www.instagram.com/p/C2d1yC_Mmga/?utm_source=ig_web_copy_link](https://www.tiktok.com/@jim59186/video/7316727623550340398?is_from_webapp=1&sender_device=pc)')
 ```
 
 
-Example of scraping a profile:
+Example scraping a profile:
 ```
 # input the username of the profile
 instagram_profile = instagram.profile('tyler_donovan2')
 ```
 
-Instagram Profile Attributes:
+General Profile Attributes:
 ```
 # the following can be accessed by instagram.profile.attribute
 json_user_data   # (dict) the direct json from the instagram api
@@ -38,4 +41,15 @@ followers        # (int) number of people following the account
 highlight_count  # (int) number of highlights
 post_count       # (int) number of posts
 posts            # [(dict)] {"shortcode":"post shortcode","caption": "post caption","likes": "like count","comments": "comment count","url": "post url"}
+```
+Instagram Specific Attributes:
+```
+```
+Tiktok Specific Attributes:
+```
+```
+
+General Post Methods:
+```
+save_video(outfile)
 ```
