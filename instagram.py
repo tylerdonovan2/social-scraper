@@ -3,7 +3,7 @@ import requests, json, re
 class profile:
     def __init__(self, username: str):
         # if link is inputted parse then username
-        if 'https' in username or 'http' in username:
+        if 'http' in username:
             username = re.findall("(?<=www.instagram.com/)(.*)(?=/)",username)[0]
 
         headers = {
@@ -76,7 +76,7 @@ class post:
     def __init__(self, shortcode: str):
 
         # if link is inputted then parse shortcode
-        if 'https' in shortcode or 'http' in shortcode:
+        if 'http' in shortcode:
             shortcode = re.findall("(?<=www.instagram.com/p/)(.*)(?=/)",shortcode)[0]
 
         headers = {
@@ -174,7 +174,3 @@ class post:
 
 
 
-
-
-
-print(re.findall("(?<=www.instagram.com/)(.*)(?=/)","https://www.instagram.com/tyler_donovan2/")[0])
